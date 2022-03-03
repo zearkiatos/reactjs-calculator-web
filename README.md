@@ -12,7 +12,9 @@ This is a web calculator 🧮 with reactjs ⚛️
 
 Github: [https://zearkiatos.github.io/reactjs-calculator-web//](https://zearkiatos.github.io/reactjs-calculator-web/)
 
-Gitlab 🦊: [https://caprilespe.gitlab.io/reactjs-calculator-web/](https://caprilespe.gitlab.io/reactjs-calculator-web//)
+Gitlab 🦊: [https://caprilespe.gitlab.io/reactjs-calculator-web/](https://caprilespe.gitlab.io/reactjs-calculator-web/)
+
+Vercel: [https://reactjs-calculator-web.vercel.app/](https://reactjs-calculator-web.vercel.app/)
 
 # Getting Started with Create React App
 

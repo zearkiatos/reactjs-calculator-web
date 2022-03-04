@@ -18,6 +18,8 @@ Vercel: [https://reactjs-calculator-web.vercel.app/](https://reactjs-calculator-
 
 Firebase 🔥: [https://reactjs-calculator-web.firebaseapp.com/](https://reactjs-calculator-web.firebaseapp.com/)
 
+Netlify: [https://reactjs-calculator-web.netlify.app/](https://reactjs-calculator-web.netlify.app/)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

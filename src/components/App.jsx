@@ -1,5 +1,11 @@
 import React from "react";
 
-const App = () => <h1>Hello World! 👋 🌎 </h1>;
-
+const App = () => {
+  console.log("Application render");
+  return (
+    <header>
+      <h1>Web Calculator 🧮</h1>
+    </header>
+  );
+};
 export default App;

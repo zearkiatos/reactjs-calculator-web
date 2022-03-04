@@ -16,6 +16,8 @@ Gitlab 🦊: [https://caprilespe.gitlab.io/reactjs-calculator-web/](https://capr
 
 Vercel: [https://reactjs-calculator-web.vercel.app/](https://reactjs-calculator-web.vercel.app/)
 
+Firebase 🔥: [https://reactjs-calculator-web.firebaseapp.com/](https://reactjs-calculator-web.firebaseapp.com/)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

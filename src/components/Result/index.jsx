@@ -1,14 +1,9 @@
-import React from 'react';
+import React from "react";
 
-const Result = ({ value, text }) => {
-    console.log("Renderization result");
-    console.log(value);
-    console.log(text);
-    return (
-        <div className="result">
-            <span>0</span>
-        </div>
-    );
-}
+const Result = ({ value }) => (
+  <div className="result">
+    <span>{value}</span>
+  </div>
+);
 
 export default Result;

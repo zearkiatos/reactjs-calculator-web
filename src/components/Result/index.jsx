@@ -11,4 +11,8 @@ Result.propTypes = {
   value: PropTypes.number.isRequired
 };
 
+Result.defaultProps = {
+  value: 0
+};
+
 export default Result;

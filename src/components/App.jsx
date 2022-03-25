@@ -4,12 +4,14 @@ import Button from '../components/Button';
 import "../styles/app.css";
 
 const App = () => {
-  console.log("Application render");
+  const addNumber = text => {
+    console.log(text);
+  }
   return (
     <main className="react-calculator">
       <Result />
       <div className="numbers">
-        <Button text="1" />
+        <Button text="1" clickHandler={addNumber} />
         <button>2</button>
         <button>3</button>
         <button>4</button>

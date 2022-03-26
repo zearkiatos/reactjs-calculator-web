@@ -1,26 +1,35 @@
 import React from "react";
-import Result from "../components/Result";
-import Button from '../components/Button';
+import Result from "./Result";
+import Button from './Button';
+import MathOperations from "./MathOperations";
 import "../styles/app.css";
 
 const App = () => {
   const addNumber = text => {
     console.log(text);
+  };
+
+  const onClickOperation = text => {
+
+  }
+
+  const onClickEqual = text => {
+    
   }
   return (
     <main className="react-calculator">
       <Result />
       <div className="numbers">
         <Button text="1" clickHandler={addNumber} />
-        <button>2</button>
-        <button>3</button>
-        <button>4</button>
-        <button>5</button>
-        <button>6</button>
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
-        <button>0</button>
+        <Button text="2" clickHandler={addNumber} />
+        <Button text="3" clickHandler={addNumber} />
+        <Button text="4" clickHandler={addNumber} />
+        <Button text="5" clickHandler={addNumber} />
+        <Button text="6" clickHandler={addNumber} />
+        <Button text="7" clickHandler={addNumber} />
+        <Button text="8" clickHandler={addNumber} />
+        <Button text="9" clickHandler={addNumber} />
+        <Button text="0" clickHandler={addNumber} />
       </div>
       <div className="functions">
         <button>
@@ -31,11 +40,7 @@ const App = () => {
         </button>
       </div>
       <div className="math-operations">
-        <button>➕</button>
-        <button>➖</button>
-        <button>✖️</button>
-        <button>➗</button>
-        <button>=</button>
+        <MathOperations onClickOperation={onClickOperation} onClickEqual={onClickEqual}/>
       </div>
     </main>
   );

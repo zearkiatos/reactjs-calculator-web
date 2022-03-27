@@ -1,21 +1,17 @@
 import React from "react";
 import Result from "./Result";
-import Button from './Button';
+import Button from "./Button";
 import MathOperations from "./MathOperations";
 import "../styles/app.css";
 
 const App = () => {
-  const addNumber = text => {
+  const addNumber = (text) => {
     console.log(text);
   };
 
-  const onClickOperation = text => {
+  const onClickOperation = (text) => {};
 
-  }
-
-  const onClickEqual = text => {
-    
-  }
+  const onClickEqual = (text) => {};
   return (
     <main className="react-calculator">
       <Result />
@@ -32,16 +28,13 @@ const App = () => {
         <Button text="0" clickHandler={addNumber} />
       </div>
       <div className="functions">
-        <button>
-          C
-        </button>
-        <button>
-          ⬅
-        </button>
+        <button>C</button>
+        <button>⬅</button>
       </div>
-      <div className="math-operations">
-        <MathOperations onClickOperation={onClickOperation} onClickEqual={onClickEqual}/>
-      </div>
+      <MathOperations
+        onClickOperation={onClickOperation}
+        onClickEqual={onClickEqual}
+      />
     </main>
   );
 };

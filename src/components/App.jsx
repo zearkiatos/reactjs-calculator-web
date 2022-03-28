@@ -9,9 +9,9 @@ const App = () => {
     console.log(text);
   };
 
-  const onClickOperation = (text) => {};
+  const onClickOperation = (operation) => console.log(`Operation: ${operation}`);
 
-  const onClickEqual = (text) => {};
+  const onClickEqual = () => {};
   return (
     <main className="react-calculator">
       <Result />

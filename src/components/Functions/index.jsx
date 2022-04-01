@@ -4,7 +4,7 @@ import Button from "../Button";
 
 const Functions = ({ onContentClear, onDelete }) => (
   <div className="functions">
-    <Button text="C" clickHandler={onContentClear} />
+    <Button type="button-long-text" text="clear" clickHandler={onContentClear} />
     <Button text="⬅" clickHandler={onDelete} />
   </div>
 );

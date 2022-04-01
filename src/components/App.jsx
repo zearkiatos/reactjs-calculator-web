@@ -1,13 +1,13 @@
 import React from "react";
 import Result from "./Result";
-import Button from "./Button";
+import Numbers from "./Numbers";
 import MathOperations from "./MathOperations";
 import Functions from './Functions';
 import "../styles/app.css";
 
 const App = () => {
-  const addNumber = (text) => {
-    console.log(text);
+  const onClickNumber = (number) => {
+    console.log(`Number: ${number}`);
   };
 
   const onContentClear = () => console.log('Content Clear');
@@ -20,18 +20,9 @@ const App = () => {
   return (
     <main className="react-calculator">
       <Result />
-      <div className="numbers">
-        <Button text="1" clickHandler={addNumber} />
-        <Button text="2" clickHandler={addNumber} />
-        <Button text="3" clickHandler={addNumber} />
-        <Button text="4" clickHandler={addNumber} />
-        <Button text="5" clickHandler={addNumber} />
-        <Button text="6" clickHandler={addNumber} />
-        <Button text="7" clickHandler={addNumber} />
-        <Button text="8" clickHandler={addNumber} />
-        <Button text="9" clickHandler={addNumber} />
-        <Button text="0" clickHandler={addNumber} />
-      </div>
+      <Numbers
+        onClickNumber={onClickNumber}
+      />
       <Functions
         onDelete={onDelete}
         onContentClear={onContentClear}

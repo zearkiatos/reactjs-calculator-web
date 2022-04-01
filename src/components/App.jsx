@@ -2,6 +2,7 @@ import React from "react";
 import Result from "./Result";
 import Button from "./Button";
 import MathOperations from "./MathOperations";
+import Functions from './Functions';
 import "../styles/app.css";
 
 const App = () => {
@@ -9,9 +10,13 @@ const App = () => {
     console.log(text);
   };
 
+  const onContentClear = () => console.log('Content Clear');
+
+  const onDelete = () => console.log('Delete');
+
   const onClickOperation = (operation) => console.log(`Operation: ${operation}`);
 
-  const onClickEqual = () => {};
+  const onClickEqual = () => console.log('Equals');
   return (
     <main className="react-calculator">
       <Result />
@@ -27,10 +32,10 @@ const App = () => {
         <Button text="9" clickHandler={addNumber} />
         <Button text="0" clickHandler={addNumber} />
       </div>
-      <div className="functions">
-        <button>C</button>
-        <button>⬅</button>
-      </div>
+      <Functions
+        onDelete={onDelete}
+        onContentClear={onContentClear}
+      />
       <MathOperations
         onClickOperation={onClickOperation}
         onClickEqual={onClickEqual}

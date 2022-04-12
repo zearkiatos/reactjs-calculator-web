@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Result from "./Result";
 import Numbers from "./Numbers";
 import MathOperations from "./MathOperations";
@@ -6,6 +6,7 @@ import Functions from './Functions';
 import "../styles/app.css";
 
 const App = () => {
+  const [text, setText] = useState("");
   const onClickNumber = (number) => {
     console.log(`Number: ${number}`);
   };

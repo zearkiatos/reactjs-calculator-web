@@ -7,9 +7,7 @@ import "../styles/app.css";
 
 const App = () => {
   const [text, setText] = useState("");
-  const onClickNumber = (number) => {
-    console.log(`Number: ${number}`);
-  };
+  const onClickNumber = (number) => setText(number);;
 
   const onContentClear = () => console.log('Content Clear');
 
@@ -20,7 +18,7 @@ const App = () => {
   const onClickEqual = () => console.log('Equals');
   return (
     <main className="react-calculator">
-      <Result />
+      <Result value={text} />
       <Numbers
         onClickNumber={onClickNumber}
       />

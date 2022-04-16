@@ -7,7 +7,7 @@ import "../styles/app.css";
 
 const App = () => {
   const [stack, setStack] = useState("");
-  const onClickNumber = (number) => setStack(stack + number);
+  const onClickNumber = (number) => setStack(`${stack}${number}`);
 
   const onContentClear = () => console.log("Content Clear");
 

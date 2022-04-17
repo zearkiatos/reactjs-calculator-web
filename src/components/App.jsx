@@ -9,14 +9,16 @@ const App = () => {
   const [stack, setStack] = useState("");
   const onClickNumber = (number) => setStack(`${stack}${number}`);
 
-  const onContentClear = () => console.log("Content Clear");
+  const onContentClear = () => setStack("");
 
-  const onDelete = () => console.log("Delete");
+  const onDelete = () => {
+    const newStack = stack.substring(0, stack.length - 1);
+    setStack(newStack);
+  };
 
-  const onClickOperation = (operation) =>
-    console.log(`Operation: ${operation}`);
+  const onClickOperation = (operation) => setStack(`${stack}${operation}`);
 
-  const onClickEqual = () => console.log("Equals");
+  const onClickEqual = () => setStack(`${stack}=`);
   return (
     <main className="react-calculator">
       <Result value={stack} />

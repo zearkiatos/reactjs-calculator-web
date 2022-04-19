@@ -12,8 +12,10 @@ const App = () => {
   const onContentClear = () => setStack("");
 
   const onDelete = () => {
-    const newStack = stack.substring(0, stack.length - 1);
-    setStack(newStack);
+    if (stack.length > 0) {
+      const newStack = stack.substring(0, stack.length - 1);
+      setStack(newStack);
+    }
   };
 
   const onClickOperation = (operation) => setStack(`${stack}${operation}`);

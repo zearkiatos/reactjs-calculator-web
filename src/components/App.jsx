@@ -18,9 +18,16 @@ const App = () => {
     }
   };
 
-  const onClickOperation = (operation) => setStack(`${stack}${operation}`);
+  const operationResolver = {
+    "➕": "+",
+    "➖": "-",
+    "✖️": "*",
+    "➗": "/",
+  };
 
-  const onClickEqual = () => setStack(`${stack}=`);
+  const onClickOperation = (operation) => setStack(`${stack}${operationResolver[operation]}`);
+
+  const onClickEqual = () => setStack(eval(stack).toString());
   return (
     <main className="react-calculator">
       <Result value={stack} />

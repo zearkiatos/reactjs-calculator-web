@@ -34,7 +34,7 @@ const App = () => {
   const onClickEqual = () => setStack(eval(stack).toString());
   return (
     <main className="react-calculator">
-      <Result value={stack} />
+      <Result value={items[items.length-1]} />
       <Numbers onClickNumber={onClickNumber} />
       <Functions onDelete={onDelete} onContentClear={onContentClear} />
       <MathOperations

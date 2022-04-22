@@ -1,5 +1,6 @@
 /* eslint no-eval: 0 */
 import React, { useState } from "react";
+import words from 'lodash.words';
 import Result from "./Result";
 import Numbers from "./Numbers";
 import MathOperations from "./MathOperations";
@@ -8,6 +9,8 @@ import "../styles/app.css";
 
 const App = () => {
   const [stack, setStack] = useState("");
+  const items = words(stack, /[^-^+^*^/]+/g);
+  console.log(items);
   const onClickNumber = (number) => setStack(`${stack}${number}`);
 
   const onContentClear = () => setStack("");

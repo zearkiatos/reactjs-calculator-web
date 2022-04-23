@@ -10,7 +10,6 @@ import "../styles/app.css";
 const App = () => {
   const [stack, setStack] = useState("");
   const items = words(stack, /[^-^+^*^/]+/g);
-  console.log(items);
   const onClickNumber = (number) => setStack(`${stack}${number}`);
 
   const onContentClear = () => setStack("");
@@ -29,12 +28,14 @@ const App = () => {
     "➗": "/",
   };
 
+  const value = items.length > 0 ? items[items.length-1] : "0";
+
   const onClickOperation = (operation) => setStack(`${stack}${operationResolver[operation]}`);
 
   const onClickEqual = () => setStack(eval(stack).toString());
   return (
     <main className="react-calculator">
-      <Result value={items[items.length-1]} />
+      <Result value={value} />
       <Numbers onClickNumber={onClickNumber} />
       <Functions onDelete={onDelete} onContentClear={onContentClear} />
       <MathOperations

@@ -4,11 +4,11 @@ import Button from "../Button";
 
 const MathOperations = ({ onClickOperation, onClickEqual }) => (
   <section className="math-operations">
-    <Button text="➕" clickHandler={onClickOperation} />
-    <Button text="➖" clickHandler={onClickOperation} />
-    <Button text="✖️" clickHandler={onClickOperation} />
-    <Button text="➗" clickHandler={onClickOperation} />
-    <Button text="=" clickHandler={onClickEqual} />
+    <Button backgroundColor='#ffce5c' text="➕" clickHandler={onClickOperation} />
+    <Button text="➖" backgroundColor='#ffce5c' clickHandler={onClickOperation} />
+    <Button text="✖️" backgroundColor='#ffce5c' clickHandler={onClickOperation} />
+    <Button text="➗" backgroundColor='#ffce5c' clickHandler={onClickOperation} />
+    <Button text="🟰" backgroundColor='#ffce5c' clickHandler={onClickEqual} />
   </section>
 );
 

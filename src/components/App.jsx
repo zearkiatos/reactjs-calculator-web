@@ -25,7 +25,7 @@ const App = () => {
     "➕": "+",
     "➖": "-",
     "✖️": "*",
-    "➗": "/",
+    "➗": "/"
   };
 
   const value = items.length > 0 ? items[items.length-1] : "0";

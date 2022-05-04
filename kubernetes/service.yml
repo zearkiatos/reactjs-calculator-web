@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2022-02-26T15:18:03Z"
+  labels:
+    app: reactjs-calculator-web
+  name: reactjs-calculator-web
+  namespace: default
+  resourceVersion: "12497"
+  uid: d5336e87-0a54-4cb0-b857-cdfc9f2f1f38
+spec:
+  allocateLoadBalancerNodePorts: true
+  clusterIP: 10.108.180.242
+  clusterIPs:
+  - 10.108.180.242
+  externalTrafficPolicy: Cluster
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - nodePort: 31116
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: reactjs-calculator-web
+  sessionAffinity: None
+  type: LoadBalancer
+status:
+  loadBalancer: {}

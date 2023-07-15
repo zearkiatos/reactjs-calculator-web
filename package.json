@@ -9,12 +9,12 @@
     "@testing-library/react": "^12.1.3",
     "@testing-library/user-event": "^13.5.0",
     "dotenv": "^16.0.0",
-    "firebase": "^9.6.7",
+    "firebase": "^8.6.8",
     "lodash.words": "^4.2.0",
     "prop-types": "^15.8.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-scripts": "5.0.0",
+    "react-scripts": "^5.0.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -26,12 +26,26 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "firebase:deploy": "firebase deploy",
-    "prefirebase:deploy": "npm run build"
+    "prefirebase:deploy": "npm run build",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "docker:dev": "concurrently --kill-others \"npm run dev\" \"npm run storybook\""
   },
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "plugin:storybook/recommended"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
     ]
   },
   "browserslist": {
@@ -47,6 +61,22 @@
     ]
   },
   "devDependencies": {
-    "nodemon": "^2.0.15"
+    "@babel/plugin-transform-runtime": "^7.22.9",
+    "@babel/preset-env": "^7.22.9",
+    "@babel/preset-react": "^7.22.5",
+    "@storybook/addon-essentials": "^7.0.27",
+    "@storybook/addon-interactions": "^7.0.27",
+    "@storybook/addon-links": "^7.0.27",
+    "@storybook/blocks": "^7.0.27",
+    "@storybook/preset-create-react-app": "^7.0.27",
+    "@storybook/react": "^7.0.27",
+    "@storybook/react-webpack5": "^7.0.27",
+    "@storybook/testing-library": "^0.0.14-next.2",
+    "babel-plugin-named-exports-order": "^0.0.2",
+    "concurrently": "^8.2.0",
+    "eslint-plugin-storybook": "^0.6.12",
+    "nodemon": "^2.0.15",
+    "storybook": "^7.0.27",
+    "webpack": "^5.88.1"
   }
 }

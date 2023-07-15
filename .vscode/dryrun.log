@@ -1,0 +1,5 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/pedrocapriles/Documents/courses/udemy/reactjs/reactjs-calculator-web'
+docker compose -f docker-compose.develop.yml up
+make: Leaving directory `/Users/pedrocapriles/Documents/courses/udemy/reactjs/reactjs-calculator-web'
+ 

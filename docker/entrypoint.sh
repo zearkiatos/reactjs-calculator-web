@@ -1,4 +1,4 @@
-if [ $(echo "$NODE_ENV")=="develop" ]
+if [ $(echo "$NODE_ENV")=="development" ]
 then
     npm run docker:dev
 else

@@ -1,0 +1,5 @@
+./node_modules
+/.github
+/.firebase
+/.vscode
+package-lock.json
